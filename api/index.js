@@ -14,7 +14,7 @@ mongoose.connect(process.env.MONGO).then(()=>{
 })
 
 app.use('/api/user', router)
-app.use('/auth/user', authRoute)
+app.use('/api/auth', authRoute)
 
 app.use((err, req, res, next)=>{
     const statusCode = err.statusCode || 500;
